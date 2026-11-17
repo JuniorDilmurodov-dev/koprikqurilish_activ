@@ -21,7 +21,10 @@ const CorruptionAppeals = () => {
   const [message, setMessage] = useState("");
 
   const token = import.meta.env.VITE_KORRUPSIYA_TG_TOKEN;
-  const chat_id = import.meta.env.VITE_CHAT_ID_KORRUPSIYA;
+  const chat_ids = [
+    import.meta.env.VITE_CHAT_ID_KORRUPSIYA,
+    import.meta.env.VITE_CHAT_ID_KORRUPSIYA_2,
+  ].filter(Boolean);
   const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
   const handleSubmit = async (e) => {
@@ -40,18 +43,23 @@ const CorruptionAppeals = () => {
 `;
 
     try {
-      // 1. Send to Telegram bot
-      const telegramResponse = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id,
-          text: fullMessage,
-          parse_mode: "Markdown",
-        }),
-      });
+      // 1. Send to both Telegram chats
+      const telegramResponses = await Promise.all(
+        chat_ids.map((chat_id) =>
+          fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              chat_id,
+              text: fullMessage,
+              parse_mode: "Markdown",
+            }),
+          })
+        )
+      );
+      const telegramOk = telegramResponses.some((res) => res.ok);
 
       // 2. Send to your backend API
       const backendResponse = await fetch(`${Corruption_BASE_URL}korrupsiya/`, {
@@ -66,7 +74,7 @@ const CorruptionAppeals = () => {
         }),
       });
 
-      if (telegramResponse.ok && backendResponse.ok) {
+      if (telegramOk && backendResponse.ok) {
         toast.success(t("menus.menu6.toast.success"));
         setName("");
         setPhone("");
