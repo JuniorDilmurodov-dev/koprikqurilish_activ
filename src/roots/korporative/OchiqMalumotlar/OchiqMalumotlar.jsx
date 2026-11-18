@@ -18,6 +18,7 @@ const OchiqMalumotlar
         { id: 2, path: "jamiyatUstavi", title: t("ustavi") },
         { id: 3, path: "auditXulosasi", title: t("xulosasi") },
         { id: 4, path: "biznesReja", title: t("reja") },
+        { id: 5, path: "transportVositalari", title: t("transportVositalari") },
     ];
     return (
         <div className="flex flex-col min-h-screen bg-gray-50 font-sans antialiased">

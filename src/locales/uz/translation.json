@@ -680,6 +680,10 @@
   "ustavi": "Jamiyat ustavi",
   "xulosasi": "Audit xulosasi",
   "reja": "Biznes reja",
+  "transportVositalari": "Tashkilot balansidagi transport vositalari",
+  "transportVositalari_download": "Hujjatni yuklab olish",
+  "transportVositalari_back": "Orqaga",
+  "transportVositalari_desc": "Jamiyat balansidagi transport vositalari ro'yxati (Excel fayl).",
   "mainSections": {
     "title": "Asosiy bo‘limlar",
     "items": [

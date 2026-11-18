@@ -674,6 +674,10 @@
   "ustavi": "Устав компании",
   "xulosasi": "Аудиторский отчет",
   "reja": "Бизнес-план",
+  "transportVositalari": "Транспортные средства на балансе организации",
+  "transportVositalari_download": "Скачать документ",
+  "transportVositalari_back": "Назад",
+  "transportVositalari_desc": "Список транспортных средств на балансе общества (файл Excel).",
   "mainSections": {
     "title": "Основные разделы",
     "items": [

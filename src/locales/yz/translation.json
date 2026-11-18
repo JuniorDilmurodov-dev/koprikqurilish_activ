@@ -676,6 +676,10 @@
   "ustavi": "Жамият устави",
   "xulosasi": "Аудит хулосаси",
   "reja": "Бизнес режа",
+  "transportVositalari": "Ташкилот балансидаги транспорт воситалари",
+  "transportVositalari_download": "Ҳужжатни юклаб олиш",
+  "transportVositalari_back": "Орқага",
+  "transportVositalari_desc": "Жамият балансидаги транспорт воситалари рўйхати (Excel файл).",
   "mainSections": {
     "title": "Асосий бўлимлар",
     "items": [

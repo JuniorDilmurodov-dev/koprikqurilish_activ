@@ -675,6 +675,10 @@
   "ustavi": "Company Charter",
   "xulosasi": "Audit Report",
   "reja": "Business Plan",
+  "transportVositalari": "Vehicles on the organization's balance sheet",
+  "transportVositalari_download": "Download document",
+  "transportVositalari_back": "Back",
+  "transportVositalari_desc": "List of vehicles on the company's balance sheet (Excel file).",
   "mainSections": {
     "title": "Main Sections",
     "items": [

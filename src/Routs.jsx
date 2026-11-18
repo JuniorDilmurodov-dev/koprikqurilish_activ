@@ -128,6 +128,10 @@ const OchiqMalumotlar = lazy(
 const BiznesReja = lazy(
   () => import("./roots/korporative/OchiqMalumotlar/BiznesReja/BiznesReja.jsx"),
 );
+const TransportVositalari = lazy(
+  () =>
+    import("./roots/korporative/OchiqMalumotlar/TransportVositalari/TransportVositalari.jsx"),
+);
 const IchkiAudit = lazy(
   () =>
     import("./roots/korporative/BoshqaruvNazorat/IchkiAudit/IchkiAudit.jsx"),
@@ -288,6 +292,10 @@ const Routs = () => {
               <Route
                 path="/corporativ/documents/biznesReja"
                 element={<BiznesReja />}
+              />
+              <Route
+                path="/corporativ/documents/transportVositalari"
+                element={<TransportVositalari />}
               />
               <Route
                 path="/corporativ/ichkihujjatlari"
